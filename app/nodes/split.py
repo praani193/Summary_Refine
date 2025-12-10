@@ -3,8 +3,11 @@ def split_text(state):
     cs = state.get("chunk_size", 50)
 
     words = text.split()
-    for i in range(0, len(words),cs):
-        chunks = [" ".join(words[i:i+cs])]
-    state["chunks"] = chunks
+    chunks = []
 
+    for i in range(0, len(words), cs):
+        chunk = " ".join(words[i:i + cs])
+        chunks.append(chunk)
+
+    state["chunks"] = chunks
     return state
