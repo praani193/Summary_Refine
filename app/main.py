@@ -53,18 +53,14 @@ def create_graph():
 def run_graph(graph_id: str, payload: dict):
     if graph_id not in graphs:
         return {"error": "Graph not found"}
-
     graph_obj = build_summary_graph()
     runner = Runner(graph_obj)
-
-    # Increment the run counter for this graph
     run_number = graphs[graph_id]["run_counter"]
     graphs[graph_id]["run_counter"] += 1
     save_graphs(graphs)
 
-    run_id = f"{graph_id}-{run_number}"  # run_id tied to graph
+    run_id = f"{graph_id}-{run_number}"
     result = runner.run(payload)
-
     runs[run_id] = {
         "graph_id": graph_id,
         "run_number": run_number,
