@@ -1,0 +1,206 @@
+{
+  "1-0": {
+    "graph_id": "1",
+    "run_number": 0,
+    "result": {
+      "final_state": {
+        "text": "RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it becomes just a retrieval or search system.RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it becomes just a retrieval or search system.",
+        "chunks": [
+          "RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it becomes just a retrieval or search system.RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it",
+          "becomes just a retrieval or search system."
+        ],
+        "summaries": [
+          "RAG cannot work without an LLM, because the LLM is",
+          "becomes just a retrieval or search system."
+        ],
+        "final_summary": "RAG cannot work without an LLM, because the LLM is becomes just a retrieval or search system."
+      },
+      "log": [
+        {
+          "node": "split_text",
+          "state": {
+            "text": "RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it becomes just a retrieval or search system.RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it becomes just a retrieval or search system.",
+            "chunks": [
+              "RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it becomes just a retrieval or search system.RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it",
+              "becomes just a retrieval or search system."
+            ]
+          }
+        },
+        {
+          "node": "summarize_chunks",
+          "state": {
+            "text": "RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it becomes just a retrieval or search system.RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it becomes just a retrieval or search system.",
+            "chunks": [
+              "RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it becomes just a retrieval or search system.RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it",
+              "becomes just a retrieval or search system."
+            ],
+            "summaries": [
+              "RAG cannot work without an LLM, because the LLM is",
+              "becomes just a retrieval or search system."
+            ]
+          }
+        },
+        {
+          "node": "merge_summaries",
+          "state": {
+            "text": "RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it becomes just a retrieval or search system.RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it becomes just a retrieval or search system.",
+            "chunks": [
+              "RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it becomes just a retrieval or search system.RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it",
+              "becomes just a retrieval or search system."
+            ],
+            "summaries": [
+              "RAG cannot work without an LLM, because the LLM is",
+              "becomes just a retrieval or search system."
+            ],
+            "final_summary": "RAG cannot work without an LLM, because the LLM is becomes just a retrieval or search system."
+          }
+        },
+        {
+          "node": "refine_summary",
+          "state": {
+            "text": "RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it becomes just a retrieval or search system.RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it becomes just a retrieval or search system.",
+            "chunks": [
+              "RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it becomes just a retrieval or search system.RAG cannot work without an LLM, because the LLM is required to generate answers using the retrieved information. Without an LLM, it",
+              "becomes just a retrieval or search system."
+            ],
+            "summaries": [
+              "RAG cannot work without an LLM, because the LLM is",
+              "becomes just a retrieval or search system."
+            ],
+            "final_summary": "RAG cannot work without an LLM, because the LLM is becomes just a retrieval or search system."
+          }
+        }
+      ]
+    }
+  },
+  "1-1": {
+    "graph_id": "1",
+    "run_number": 1,
+    "result": {
+      "final_state": {
+        "text": "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior.",
+        "chunks": [
+          "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior."
+        ],
+        "summaries": [
+          "\u201cAn LLM is a transformer-based neural network trained on massive"
+        ],
+        "final_summary": "\u201cAn LLM is a transformer-based neural network trained on massive"
+      },
+      "log": [
+        {
+          "node": "split_text",
+          "state": {
+            "text": "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior.",
+            "chunks": [
+              "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior."
+            ]
+          }
+        },
+        {
+          "node": "summarize_chunks",
+          "state": {
+            "text": "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior.",
+            "chunks": [
+              "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior."
+            ],
+            "summaries": [
+              "\u201cAn LLM is a transformer-based neural network trained on massive"
+            ]
+          }
+        },
+        {
+          "node": "merge_summaries",
+          "state": {
+            "text": "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior.",
+            "chunks": [
+              "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior."
+            ],
+            "summaries": [
+              "\u201cAn LLM is a transformer-based neural network trained on massive"
+            ],
+            "final_summary": "\u201cAn LLM is a transformer-based neural network trained on massive"
+          }
+        },
+        {
+          "node": "refine_summary",
+          "state": {
+            "text": "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior.",
+            "chunks": [
+              "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior."
+            ],
+            "summaries": [
+              "\u201cAn LLM is a transformer-based neural network trained on massive"
+            ],
+            "final_summary": "\u201cAn LLM is a transformer-based neural network trained on massive"
+          }
+        }
+      ]
+    }
+  },
+  "2-0": {
+    "graph_id": "2",
+    "run_number": 0,
+    "result": {
+      "final_state": {
+        "text": "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior.",
+        "chunks": [
+          "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior."
+        ],
+        "summaries": [
+          "\u201cAn LLM is a transformer-based neural network trained on massive"
+        ],
+        "final_summary": "\u201cAn LLM is a transformer-based neural network trained on massive"
+      },
+      "log": [
+        {
+          "node": "split_text",
+          "state": {
+            "text": "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior.",
+            "chunks": [
+              "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior."
+            ]
+          }
+        },
+        {
+          "node": "summarize_chunks",
+          "state": {
+            "text": "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior.",
+            "chunks": [
+              "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior."
+            ],
+            "summaries": [
+              "\u201cAn LLM is a transformer-based neural network trained on massive"
+            ]
+          }
+        },
+        {
+          "node": "merge_summaries",
+          "state": {
+            "text": "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior.",
+            "chunks": [
+              "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior."
+            ],
+            "summaries": [
+              "\u201cAn LLM is a transformer-based neural network trained on massive"
+            ],
+            "final_summary": "\u201cAn LLM is a transformer-based neural network trained on massive"
+          }
+        },
+        {
+          "node": "refine_summary",
+          "state": {
+            "text": "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior.",
+            "chunks": [
+              "\u201cAn LLM is a transformer-based neural network trained on massive text data to predict the next token. Using attention mechanisms, embeddings, and billions of parameters, it learns language patterns, reasoning, and world knowledge. LLMs are trained using self-supervised learning and fine-tuned with RLHF for helpful behavior."
+            ],
+            "summaries": [
+              "\u201cAn LLM is a transformer-based neural network trained on massive"
+            ],
+            "final_summary": "\u201cAn LLM is a transformer-based neural network trained on massive"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "1": {
+    "type": "summary_refinement",
+    "run_counter": 2
+  },
+  "2": {
+    "type": "summary_refinement",
+    "run_counter": 1
+  }
+}
