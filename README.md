@@ -35,6 +35,8 @@
 * Persistently store **graph and run results** in JSON files
 * List and retrieve **graphs and run histories**
 
+### Workflow Diagram
+![Summary Workflow](assets/workflow.png)
 ---
 ## Project Structure
 
@@ -66,6 +68,9 @@
 | `/graphs/{graph_id}`           | GET    | Retrieves details of a specific graph by `graph_id`. Returns error if not found.                                    |
 | `/runs`                        | GET    | Lists all run histories with results.                                                                               |
 | `/runs/{run_id}`               | GET    | Retrieves details of a specific run by `run_id`. Returns error if not found.                                        |
+
+### SwaggerUI result
+![SwaggerUI result](assets/docs-screenshot.png)
 
 
 ## Improvements with More Time
