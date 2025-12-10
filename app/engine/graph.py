@@ -12,25 +12,25 @@ class Runner:
 
     def run(self, ini_state: dict):
         state = ini_state
-        current_node = self.graph.e_node
-        execution_log = []
+        curr = self.graph.e_node
+        log = []
 
         iteration = 0
 
-        while current_node != "end":
+        while curr != "end":
             iteration += 1
             if iteration > self.max_iter:
-                execution_log.append({"error": "Max iterations reached"})
+                log.append({"error": "Max iterations reached"})
                 break
-            node_fn = self.graph.nodes[current_node]
+            node_fn = self.graph.nodes[curr]
             state = node_fn(state)
-            execution_log.append({"node": current_node, "state": state.copy()})
-            edge = self.graph.edges.get(current_node)
+            log.append({"node": curr, "state": state.copy()})
+            edge = self.graph.edges.get(curr)
             if edge is None:
                 break
             if callable(edge):
-                current_node = edge(state)
+                curr = edge(state)
             else:
-                current_node = edge
+                curr = edge
 
-        return {"final_state": state, "log": execution_log}
+        return {"final_state": state, "log": log}
