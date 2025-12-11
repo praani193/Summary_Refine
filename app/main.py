@@ -103,12 +103,11 @@ def list_runs():
 def get_run(run_id: str):
     return runs.get(run_id, {"error":"Run not found"})
 
-@app.get("/runs/{runid}/final_result")
+@app.get("/runs/{run_id}/final_result")
 def get_result(run_id: str):
-    try:
-        run_item = runs.get(run_id)
-        run_result = run_item.get("result")
-        run_final_state = run_result.get("final_state")
-        return run_final_state.get("final_summary")
-    except:
+    if run_id not in runs:
         return {"error":"Run not found"}
+    run_item = runs.get(run_id)
+    run_result = run_item.get("result")
+    run_final_state = run_result["final_state"]
+    return run_final_state
