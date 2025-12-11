@@ -63,11 +63,13 @@
 | ------------------------------ | ------ | ------------------------------------------------------------------------------------------------------------------- |
 | `/`                            | GET    | Returns a welcome message for the Summary Refinement Workflow Engine.                                               |
 | `/graphs/create`               | POST   | Creates a new summary graph and returns its `graph_id`.                                                             |
-| `/graphs/{graph_id}/graph_run` | POST   | Runs the specified graph with the provided `payload`. Returns the `run_id`, `graph_id`, `run_number`, and `result`. |
+| `/graphs/{graph_id}/graph_run` | POST   | Runs the specified graph with the provided `payload`. Returns the `run_id`, `graph_id`, `run_number`, and `result`.`run_number` starts from 0 and `graph_id` starts from 1|
 | `/graphs`                      | GET    | Lists all existing graphs with their metadata.                                                                      |
 | `/graphs/{graph_id}`           | GET    | Retrieves details of a specific graph by `graph_id`. Returns error if not found.                                    |
 | `/runs`                        | GET    | Lists all run histories with results.                                                                               |
-| `/runs/{run_id}`               | GET    | Retrieves details of a specific run by `run_id`. Returns error if not found.                                        |
+| `/runs/{run_id}`               | GET    | Retrieves details of a specific run by `run_id`. Returns error if not found.`run_id` is in format of "{`graph_id`}- {`run_number` of the `graph_id`}".|
+| `/runs/{run_id}/final_result`  | GET    | Retrieves final result / refined summary of a specifiic run by `run_id`. Returns error if not found.                |
+
 
 ### SwaggerUI result
 ![SwaggerUI result](assets/docs-screenshot.png)
