@@ -50,6 +50,7 @@
 | `app/memory/graphs.json` | File | Stores graph definitions |
 | `app/memory/runs.json` | File | Stores run results |
 | `venv/` | Folder | Virtual environment with dependencies |
+|`assests/`| Folder| Currently stores photos needed for Readme |
 | `requirements.txt` | File | Project dependencies |
 | `LICENSE` | File | License information |
 | `README.md` | File | Project overview and instructions |
