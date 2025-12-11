@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import PlainTextResponse
 from app.engine.graph import Graph, Runner
 from app.nodes.split import split_text
 from app.nodes.summarize import summarize_chunks, merge_summaries
@@ -33,9 +34,16 @@ def build_summary_graph():
     )
 
 
-@app.get("/")
+@app.get("/", response_class= PlainTextResponse)
 def home():
-    return {"message": "Welcome to the Summary Refinement Workflow Engine"}
+    return ("Welcome to the Summary Refinement Workflow Engine.\n\n"
+            "A 'graph' is a workflow that defines how text is processed. "
+            "You can create a graph once and reuse it many times.\n\n"
+            "Every time you execute a graph, a new 'run' is created. "
+            "A run stores the input, the output, and all intermediate states.\n\n"
+            "Graphs define the workflow. "
+            "Runs record the execution of that workflow.\n\n"
+            "Use this engine to create graphs, run them, and retrieve refined summaries.")
 
 
 @app.post("/graphs/create")
@@ -52,7 +60,7 @@ def create_graph():
 @app.post("/graphs/{graph_id}/graph_run")
 def run_graph(graph_id: str, payload: dict):
     if graph_id not in graphs:
-        return {"error": "Graph not found"}
+        return {"error":"Graph not found"}
     graph_obj = build_summary_graph()
     runner = Runner(graph_obj)
     run_number = graphs[graph_id]["run_counter"]
@@ -83,7 +91,7 @@ def list_graphs():
 
 @app.get("/graphs/{graph_id}")
 def get_graph(graph_id: str):
-    return graphs.get(graph_id, {"error": "Graph not found"})
+    return graphs.get(graph_id, {"error":"Graph not found"})
 
 
 @app.get("/runs")
@@ -93,4 +101,14 @@ def list_runs():
 
 @app.get("/runs/{run_id}")
 def get_run(run_id: str):
-    return runs.get(run_id, {"error": "Run not found"})
+    return runs.get(run_id, {"error":"Run not found"})
+
+@app.get("/runs/{runid}/final_result")
+def get_result(run_id: str):
+    try:
+        run_item = runs.get(run_id)
+        run_result = run_item.get("result")
+        run_final_state = run_result.get("final_state")
+        return run_final_state.get("final_summary")
+    except:
+        return {"error":"Run not found"}
